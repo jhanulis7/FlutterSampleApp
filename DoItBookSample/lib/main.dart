@@ -4,12 +4,23 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<StatefulWidget> createState() {
+    return _MyApp();
+  }
+}
+
+class _MyApp extends State<MyApp> {
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    var switchValue = true;
+    var test = 'hello';
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -31,7 +42,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Text("hello jh")
     );
   }
 }
